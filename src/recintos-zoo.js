@@ -73,6 +73,11 @@
                     }
                 }
             };
+            //Regra específica: Hipopótamo não tolera outras espécies caso n seja savana e rio.
+            if(animal_atual[0] == "HIPOPOTAMO" && e[3] != undefined){
+                if(e[1].includes("rio") && e[1].includes("savana")){
+                } else valido = false;
+            }
 
             if(animal_atual[0] == "MACACO" && ocupacao == 1) valido = false;
 
